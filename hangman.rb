@@ -1,6 +1,6 @@
 def random_word
   word = File.read("../scrabble word cheat/words.txt").split("\n").sample
-  if word.length > 7
+  if word.length > 6
     random_word
   end
   word
@@ -24,6 +24,7 @@ def hang_man_game
       puts "You won"
       break
     elsif incorrect_guesses > 8
+      puts "The word was #{word}"
       puts "You lost"
       break
     end
